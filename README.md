@@ -1,7 +1,20 @@
 # E-wallet Transactions Analysis (Python)
-Given dataset
-Suppose you are a DA in an e-wallet company, and you need to analyze the following datasets:
-<br>
+
+## 1. Situation
+The company, an e-wallet provider, wants to analyze transaction data to understand product performance, team ownership, and refund sources. The goal is to detect top-selling products, check for inconsistencies, identify the lowest-performing team, and classify transactions.
+
+## 2. Task
+Based on the situation and requirements, I used Python (Pandas & NumPy) for data wrangling and exploratory data analysis (EDA) to extract insights and meet the objectives.
+
+## 3. Action
+## 3.1 Action Breakdown 
+
+| **Step**              | **Description** |  
+|----------------------|---------------|  
+| **Part 1: Exploratory Data Analysis (EDA)** | Focused on data cleaning and transformation |  
+| **Part 2: Data Wrangling & Analysis** | Focused on performance analysis and extracting insights |  
+
+Dataset
 - payment_report.csv (monthly payment volume of products)
 - product.csv (product information)
 - transactions.csv (transactions information)
@@ -157,9 +170,10 @@ min    0.000000e+00  0.000000e+00  1.682874e+12
 75%    2.100163e+07  2.451345e+07  1.683269e+12  
 max    6.993439e+09  2.100000e+10  1.683479e+12
 ```
-</details><br>
+</details>
 
 ## Part II: Data Wrangling
+
 <details> <summary><strong>1. Top 3 product_ids with the highest volume.</strong></summary>
 
 ```python
@@ -303,3 +317,23 @@ Transfer Money Transaction        34585
 Withdraw Money Transaction        24814
 ```
 </details>
+
+## 4. Result (Key Insights & Recommendations)
+
+## Key Insights  
+- Product 1976 leads with 61.8B, significantly higher than others.  
+- Each product_id belongs to only one team, no inconsistencies found.  
+- APS has the lowest volume (51.1M), with PXXXXXE as its weakest category (25.2M).  
+- Source_id 38 has an extremely high refund volume (36.5B).  
+- Multiple transaction types identified, but invalid transactions exist.  
+- Top up (108.6B) and payment (71.8B) dominate, while transfers (37.0B) lag.  
+
+## Recommendations  
+- Optimize product 1976 and investigate the large volume gap.  
+- Regularly check to maintain data integrity.  
+- Review APS’s performance and explore ways to boost PXXXXXE.  
+- Investigate system errors, fraud risks, or refund policy issues.  
+- Check for system errors or fraud and improve data validation.  
+- Promote transfers and ensure stability in top up & payment services.  
+
+
