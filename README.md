@@ -1,4 +1,4 @@
-# Python Project: Data wrangling & EDA 
+# E-wallet Transactions Analysis (Python)
 Given dataset
 Suppose you are a DA in an e-wallet company, and you need to analyze the following datasets:
 <br>
